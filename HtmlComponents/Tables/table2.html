@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table 1</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.1/css/buttons.dataTables.min.css" />
+    <link href="https://cdn.datatables.net/rowgroup/1.1.1/css/rowGroup.dataTables.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.2.4/css/fixedHeader.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/material.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div>
+        <div class="table-responsive table-sm table-hover">
+            <h3 style="text-align:center;"><strong>Historial de Cambios</strong></h3>
+            <!-- <div style="height:300px; overflow-y:scroll"> -->
+            <div style="margin:3em;">
+                <table id="reasignar-supervisor-log-table" class="table table-hover " style="width:100%">
+                    <thead class="table-active">
+                        <tr>
+                            <th>
+                                Fecha de reasignación
+                            </th>
+                            <th class="text-center" style="text-align: center;">
+                                Hora de reasignación
+                            </th>
+                            <th class="text-center" style="text-align: center;">
+                                Usuario que reasignó
+                            </th>
+                            <th class="text-center" style="text-align: center;">
+                                Supervisor anterior
+                            </th>
+                            <th class="text-center" style="text-align: center;">
+                                Supervisor reasignado
+                            </th>
+                            <th class="text-center" style="text-align: center;">
+                                Motivo de reasignación
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>dsf</td>
+                            <td class="text-center">dsf</td>
+                            <td class="text-center">dsf</td>
+                            <td class="text-center">dsf</td>
+                            <td class="text-center">dsf</td>
+                            <td class="text-center">dsf</td>
+                        </tr>
+                        <tr>
+                            <td>dsf</td>
+                            <td class="text-center">dsf</td>
+                            <td class="text-center">dsf</td>
+                            <td class="text-center">dsf</td>
+                            <td class="text-center">dsf</td>
+                            <td class="text-center">dsf</td>
+                        </tr>
+
+                        <tr>
+                            <td>dsf</td>
+                            <td class="text-center">dsf</td>
+                            <td class="text-center">dsf</td>
+                            <td class="text-center">dsf</td>
+                            <td class="text-center">dsf</td>
+                            <td class="text-center">dsf</td>
+                        </tr>
+                        <tr>
+                            <td>dsf</td>
+                            <td class="text-center">dsf</td>
+                            <td class="text-center">dsf</td>
+                            <td class="text-center">dsf</td>
+                            <td class="text-center">dsf</td>
+                            <td class="text-center">dsf</td>
+                        </tr>
+                        <tr>
+                            <td>dsf</td>
+                            <td class="text-center">dsf</td>
+                            <td class="text-center">dsf</td>
+                            <td class="text-center">dsf</td>
+                            <td class="text-center">dsf</td>
+                            <td class="text-center">dsf</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+
+        </div>
+        <br />
+        <br />
+        <div>
+
+            <div>
+                <form>
+                    <div class="row">
+
+                        <div class="form-group col col-md-12">
+                            <label class="control-label col-md-3 col-form-label">Supervisor Actual : </label>
+                            <div class="col col-md-9">
+                                <input class="form-control" disabled value="hola" />
+                            </div>
+                        </div>
+
+                    </div>
+                    <br />
+                    <div class="row">
+
+                        <div class="form-group col col-md-12">
+                            <label class="control-label col-md-3 col-form-label"> Nuevo Supervisor : </label>
+                            <div class="col col-md-9">
+                                <select asp-items="@ViewBag.supervisores" class="form-control"></select>
+                            </div>
+                        </div>
+
+                    </div>
+                    <br />
+                    <div class="row">
+
+                        <div class="form-group col col-md-12">
+                            <label class="control-label col-md-3 col-form-label">Motivo : </label>
+                            <div class="col col-md-9">
+                                <textarea style="resize:none;" class="form-control"></textarea>
+                            </div>
+                        </div>
+
+                    </div>
+                    <br />
+                    <div class="row " id="contBotones">
+                        <div class="form-group col-md-12" style="text-align:center;">
+
+                            <button class="btn btn-sm btn-default botones" type="button"
+                                style="color:white">Cancelar</button>
+                            <button class="btn btn-sm btn-success botones" type="button" style="color:white">
+                                Reasignar s
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript" charset="utf8"
+    src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" charset="utf8"
+    src="https://cdn.datatables.net/buttons/1.6.1/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" charset="utf8"
+    src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script type="text/javascript" charset="utf8"
+    src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.html5.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/rowgroup/1.1.1/js/dataTables.rowGroup.min.js"></script>
+<script type="text/javascript" charset="utf8"
+    src="https://cdn.datatables.net/plug-ins/1.10.25/sorting/date-euro.js"></script>
+<script type="text/javascript"
+    src="https://cdn.datatables.net/fixedcolumns/3.3.1/js/dataTables.fixedColumns.min.js"></script>
+<script type="text/javascript"
+    src="https://cdn.datatables.net/fixedheader/3.2.4/js/dataTables.fixedHeader.min.js"></script>
+<!--referir el archivo de configuración regional de la cultura española -->
+<script src="http://cdn.syncfusion.com/js/assets/i18n/ej.culture.es-ES.min.js"></script>
+<!--referir el archivo de texto regional de la cultura española-->
+<script src="http://cdn.syncfusion.com/16.2.0.46/js/l10n/ej.localetexts.es-ES.min.js"></script>
+
+<script src="https://cdn.syncfusion.com/ej2/dist/ej2.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#reasignar-supervisor-log-table').DataTable({
+            language: {
+                search: "Buscar: ",
+                info: "Mostrando _START_ a _END_ de _TOTAL_ elementos",
+                infoFiltered: "(filtrado de _MAX_ registros en total)",
+                paginate: {
+                    first: "Primero",
+                    previous: "<<",
+                    next: ">>",
+                    last: "Último"
+                }
+            },
+            scrollY: '50vh',
+            scrollX: true,
+            scrollCollapse: true,
+            stateSave: true,
+            dom: 'Bfrtip',
+            buttons: [
+            ]
+        }).columns.adjust().draw();
+    });
+</script>
+
+
+</html>
